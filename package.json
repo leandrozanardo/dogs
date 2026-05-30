@@ -1,12 +1,34 @@
 {
   "name": "petgram",
   "version": "1.0.0",
+  "description": "PetGram — rede social de pets no estilo Instagram (React + Vite + API Origamid)",
   "private": true,
   "type": "module",
+  "author": "Leandro Zanardo",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/leandrozanardo/dogs.git"
+  },
+  "homepage": "https://leandrozanardo.github.io/dogs/",
+  "keywords": [
+    "react",
+    "vite",
+    "instagram-clone",
+    "pets",
+    "portfolio",
+    "react-router",
+    "jwt"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "build:gh-pages": "cross-env VITE_BASE_PATH=/dogs/ vite build",
+    "preview": "vite preview",
+    "preview:gh-pages": "cross-env VITE_BASE_PATH=/dogs/ vite preview"
   },
   "dependencies": {
     "prop-types": "^15.8.1",
@@ -17,6 +39,7 @@
   },
   "devDependencies": {
     "@vitejs/plugin-react": "^4.3.4",
+    "cross-env": "^7.0.3",
     "vite": "^6.0.3",
     "vite-plugin-svgr": "^4.3.0"
   }

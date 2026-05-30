@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 540" role="img" aria-label="PetGram preview">
+  <defs>
+    <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f09433"/>
+      <stop offset="50%" stop-color="#dc2743"/>
+      <stop offset="100%" stop-color="#bc1888"/>
+    </linearGradient>
+  </defs>
+  <rect width="960" height="540" fill="#fafafa"/>
+  <rect x="0" y="0" width="220" height="540" fill="#fff" stroke="#dbdbdb"/>
+  <text x="32" y="48" font-family="Segoe UI, sans-serif" font-size="22" font-weight="700" fill="#262626">PetGram</text>
+  <rect x="32" y="80" width="120" height="12" rx="6" fill="#efefef"/>
+  <rect x="32" y="110" width="100" height="12" rx="6" fill="#efefef"/>
+  <rect x="32" y="140" width="110" height="12" rx="6" fill="#efefef"/>
+  <rect x="280" y="24" width="400" height="492" fill="#fff" stroke="#dbdbdb" rx="4"/>
+  <rect x="300" y="48" width="360" height="28" fill="#fafafa"/>
+  <circle cx="318" cy="62" r="10" fill="url(#g)"/>
+  <rect x="336" y="56" width="80" height="10" rx="5" fill="#efefef"/>
+  <rect x="300" y="88" width="360" height="280" fill="#262626"/>
+  <rect x="300" y="380" width="40" height="40" fill="none"/>
+  <text x="308" y="405" font-size="18" fill="#ed4956">e</text>
+  <text x="348" y="405" font-size="18" fill="#262626">=¬</text>
+  <rect x="300" y="420" width="120" height="10" rx="5" fill="#efefef"/>
+  <rect x="300" y="440" width="200" height="8" rx="4" fill="#f5f5f5"/>
+  <rect x="300" y="468" width="360" height="36" fill="#fafafa" stroke="#dbdbdb"/>
+  <text x="312" y="491" font-family="Segoe UI, sans-serif" font-size="12" fill="#8e8e8e">Adicione um comentário...</text>
+  <text x="600" y="491" font-family="Segoe UI, sans-serif" font-size="12" fill="#0095f6" font-weight="600">Publicar</text>
+  <rect x="720" y="24" width="220" height="492" fill="#fff" stroke="#dbdbdb" rx="4"/>
+  <text x="740" y="56" font-family="Segoe UI, sans-serif" font-size="14" font-weight="600" fill="#262626">Explorar</text>
+  <g fill="#efefef">
+    <rect x="740" y="72" width="60" height="60"/>
+    <rect x="808" y="72" width="60" height="60"/>
+    <rect x="876" y="72" width="60" height="60"/>
+    <rect x="740" y="140" width="60" height="60"/>
+    <rect x="808" y="140" width="60" height="60"/>
+    <rect x="876" y="140" width="60" height="60"/>
+  </g>
+</svg>
