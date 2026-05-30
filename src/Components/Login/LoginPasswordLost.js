@@ -18,15 +18,14 @@ const LoginPasswordLost = () => {
         login: login.value,
         url: window.location.href.replace('perdeu', 'resetar'),
       });
-      const { json } = await request(url, options);
-      console.log(json);
+      await request(url, options);
     }
   }
 
   return (
     <section className="animeLeft">
       <Head title="Perdeu a senha" />
-      <h1 className="title">Perdeu a senha?</h1>
+      <h1 className="title title--auth">Recuperar senha</h1>
       {data ? (
         <p style={{ color: '#4c1' }}>{data}</p>
       ) : (
@@ -35,7 +34,7 @@ const LoginPasswordLost = () => {
           {loading ? (
             <Button disabled>Enviando...</Button>
           ) : (
-            <Button>Enviar Email</Button>
+            <Button>Enviar email</Button>
           )}
         </form>
       )}

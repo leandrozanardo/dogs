@@ -1,0 +1,26 @@
+.tabs {
+  display: flex;
+  border-top: 1px solid var(--pg-border);
+  margin-bottom: 0;
+}
+
+.tab,
+.active {
+  flex: 1;
+  padding: 0.75rem;
+  background: none;
+  border: none;
+  border-top: 2px solid transparent;
+  margin-top: -1px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--pg-text-secondary);
+  cursor: pointer;
+}
+
+.active {
+  color: var(--pg-text);
+  border-top-color: var(--pg-text);
+}

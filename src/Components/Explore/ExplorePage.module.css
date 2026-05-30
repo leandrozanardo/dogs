@@ -1,0 +1,16 @@
+.page {
+  width: 100%;
+  max-width: 935px;
+  margin: 0 auto;
+}
+
+.gridWrap {
+  background: var(--pg-surface);
+  border: 1px solid var(--pg-border);
+}
+
+@media (min-width: 768px) {
+  .gridWrap {
+    border-radius: 4px;
+  }
+}

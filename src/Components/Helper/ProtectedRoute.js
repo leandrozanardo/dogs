@@ -1,13 +1,14 @@
 import React from 'react';
+import { Outlet, Navigate } from 'react-router-dom';
 import { UserContext } from '../../UserContext';
-import { Route, Navigate } from 'react-router-dom';
+import Loading from './Loading';
 
-const ProtectedRoute = (props) => {
+const ProtectedRoute = () => {
   const { login } = React.useContext(UserContext);
 
-  if (login === true) return <Route {...props} />;
-  else if (login === false) return <Navigate to="/login" />;
-  else return null;
+  if (login === null) return <Loading />;
+  if (login === false) return <Navigate to="/login" replace />;
+  return <Outlet />;
 };
 
 export default ProtectedRoute;

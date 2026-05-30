@@ -13,10 +13,16 @@ const useFetch = () => {
       setLoading(true);
       response = await fetch(url, options);
       json = await response.json();
-      if (response.ok === false) throw new Error(json.message);
+      if (!response.ok) {
+        throw new Error(json.message || json.code || 'Erro na requisição');
+      }
     } catch (err) {
       json = null;
-      setError(err.message);
+      const message =
+        err.message === 'Failed to fetch'
+          ? 'Não foi possível conectar à API. Verifique sua conexão.'
+          : err.message;
+      setError(message);
     } finally {
       setData(json);
       setLoading(false);

@@ -1,6 +1,6 @@
 {
-  "short_name": "Dogs",
-  "name": "Dogs - Rede Social para Cachorros",
+  "short_name": "PetGram",
+  "name": "PetGram — Instagram para pets",
   "icons": [
     {
       "src": "favicon.ico",
@@ -20,6 +20,6 @@
   ],
   "start_url": ".",
   "display": "standalone",
-  "theme_color": "#fb1",
-  "background_color": "#ffffff"
+  "theme_color": "#262626",
+  "background_color": "#fafafa"
 }

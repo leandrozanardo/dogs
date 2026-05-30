@@ -1,38 +1,40 @@
 import React from 'react';
-import { UserContext } from '../../UserContext';
-import PhotoCommentsForm from './PhotoCommentsForm';
+import { Link } from 'react-router-dom';
 import styles from './PhotoComments.module.css';
 
-const PhotoComments = (props) => {
-  const [comments, setComments] = React.useState(() => props.comments);
-  const commentsSection = React.useRef(null);
-  const { login } = React.useContext(UserContext);
+export function usePhotoCommentsState(initialComments, id) {
+  const [comments, setComments] = React.useState(initialComments || []);
 
   React.useEffect(() => {
-    commentsSection.current.scrollTop = commentsSection.current.scrollHeight;
+    setComments(initialComments || []);
+  }, [id, initialComments]);
+
+  return [comments, setComments];
+}
+
+const PhotoComments = ({ comments }) => {
+  const listRef = React.useRef(null);
+
+  React.useEffect(() => {
+    if (listRef.current) {
+      listRef.current.scrollTop = listRef.current.scrollHeight;
+    }
   }, [comments]);
 
   return (
-    <>
-      <ul
-        ref={commentsSection}
-        className={`${styles.comments} ${props.single ? styles.single : ''}`}
-      >
-        {comments.map((comment) => (
-          <li key={comment.comment_ID}>
-            <b>{comment.comment_author}: </b>
-            <span>{comment.comment_content}</span>
-          </li>
-        ))}
-      </ul>
-      {login && (
-        <PhotoCommentsForm
-          single={props.single}
-          id={props.id}
-          setComments={setComments}
-        />
+    <ul ref={listRef} className={styles.list}>
+      {comments.length === 0 && (
+        <li className={styles.empty}>Seja o primeiro a comentar.</li>
       )}
-    </>
+      {comments.map((item) => (
+        <li key={item.comment_ID} className={styles.item}>
+          <Link to={`/perfil/${item.comment_author}`}>
+            <strong>{item.comment_author}</strong>
+          </Link>{' '}
+          <span>{item.comment_content}</span>
+        </li>
+      ))}
+    </ul>
   );
 };
 

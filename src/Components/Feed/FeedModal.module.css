@@ -1,17 +1,43 @@
 .modal {
   position: fixed;
-  width: 100vw;
-  height: 100vh;
-  top: 0px;
-  left: 0px;
-  background: rgba(0, 0, 0, 0.4);
+  inset: 0;
+  z-index: 300;
+  background: rgba(0, 0, 0, 0.65);
   display: flex;
-  z-index: 1000;
-  padding: 2rem calc(4rem + 15px) 2rem 4rem;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 1rem;
 }
 
-@media (max-width: 40rem) {
+.close {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  z-index: 310;
+  background: rgba(255, 255, 255, 0.15);
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: #fff;
+}
+
+.close:hover {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+@media (max-width: 900px) {
   .modal {
-    padding: 2rem calc(2rem + 15px) 2rem 2rem;
+    padding: 0;
+    align-items: stretch;
+  }
+
+  .close {
+    top: 0.75rem;
+    right: 0.75rem;
   }
 }

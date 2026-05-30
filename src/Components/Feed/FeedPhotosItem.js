@@ -6,10 +6,15 @@ const FeedPhotosItem = ({ photo, setModalPhoto }) => {
   function handleClick() {
     setModalPhoto(photo);
   }
+
   return (
-    <li className={styles.photo} onClick={handleClick}>
-      <Image src={photo.src} alt={photo.title} />
-      <span className={styles.visualizacao}>{photo.acessos}</span>
+    <li className={styles.photo}>
+      <button type="button" className={styles.btn} onClick={handleClick}>
+        <Image src={photo.src} alt={photo.title} />
+        <span className={styles.overlay}>
+          <span className={styles.stat}>♥ {photo.acessos}</span>
+        </span>
+      </button>
     </li>
   );
 };

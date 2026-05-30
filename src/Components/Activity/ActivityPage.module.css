@@ -1,0 +1,35 @@
+.note {
+  font-size: 12px;
+  color: var(--pg-text-secondary);
+  margin-bottom: 1rem;
+}
+
+.list {
+  background: var(--pg-surface);
+  border: 1px solid var(--pg-border);
+  border-radius: 8px;
+}
+
+.item {
+  padding: 0.85rem 1rem;
+  border-bottom: 1px solid var(--pg-border);
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.item:last-child {
+  border-bottom: none;
+}
+
+.type {
+  font-size: 11px;
+  text-transform: uppercase;
+  color: var(--pg-accent);
+  font-weight: 600;
+}
+
+.time {
+  font-size: 11px;
+  color: var(--pg-text-secondary);
+}

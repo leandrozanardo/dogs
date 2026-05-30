@@ -1,66 +1,102 @@
 .form {
-  display: grid;
-  grid-template-columns: 1fr auto;
-  align-items: stretch;
-  margin: 1rem;
+  border-top: 1px solid var(--pg-border);
+  padding: 0.75rem 1rem;
+  padding-bottom: max(0.75rem, env(safe-area-inset-bottom));
+  background: var(--pg-surface);
+  flex-shrink: 0;
+  position: sticky;
+  bottom: 0;
+  z-index: 5;
 }
 
-.single.form {
-  margin: 1rem 0;
+.row {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
 }
 
-.textarea {
-  display: block;
-  width: 100%;
-  font-size: 1rem;
-  font-family: var(--type-first);
-  resize: none;
-  border: 1px solid #eee;
-  padding: 0.5rem;
-  border-radius: 0.2rem;
-  background: #eee;
-  transition: 0.2s;
-}
-
-.textarea:focus,
-.textarea:hover {
-  outline: none;
-  border-color: #fb1;
-  background: white;
-  box-shadow: 0 0 0 3px #fea;
-}
-
-.button {
+.input {
+  flex: 1;
   border: none;
-  cursor: pointer;
-  color: #333;
-  background: transparent;
-  font-size: 1rem;
-  padding: 0 1rem;
-  overflow: hidden;
-}
-
-.button:focus,
-.button:hover {
   outline: none;
+  background: transparent;
+  font-size: 14px;
+  padding: 0.5rem 0;
+  min-width: 0;
 }
 
-.button:focus svg path,
-.button:hover svg path {
-  fill: #fea;
-  stroke: #fb1;
+.input:disabled {
+  opacity: 0.6;
 }
 
-.button:focus svg g,
-.button:hover svg g {
-  animation: latir 0.6s infinite;
+.input::placeholder {
+  color: var(--pg-text-secondary);
 }
 
-@keyframes latir {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
+.postBtn {
+  border: none;
+  background: none;
+  color: var(--pg-accent);
+  font-weight: 600;
+  font-size: 14px;
+  padding: 0.5rem 0;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.postBtn:disabled {
+  opacity: 0.5;
+  cursor: wait;
+}
+
+.error {
+  color: var(--pg-danger);
+  font-size: 12px;
+  margin-top: 0.5rem;
+  line-height: 1.35;
+}
+
+.success {
+  color: #2e7d32;
+  font-size: 12px;
+  margin-top: 0.5rem;
+  font-weight: 600;
+}
+
+.loginCta {
+  border-top: 1px solid var(--pg-border);
+  padding: 1rem;
+  font-size: 14px;
+  text-align: center;
+  color: var(--pg-text-secondary);
+  flex-shrink: 0;
+  position: sticky;
+  bottom: 0;
+  background: var(--pg-surface);
+  z-index: 5;
+}
+
+.loginCta a {
+  color: var(--pg-accent);
+  font-weight: 600;
+}
+
+.demoHint {
+  display: block;
+  margin-top: 0.35rem;
+  font-size: 12px;
+}
+
+.placeholder {
+  border-top: 1px solid var(--pg-border);
+  padding: 1rem;
+  flex-shrink: 0;
+}
+
+.skeleton {
+  display: block;
+  height: 14px;
+  width: 60%;
+  background: var(--pg-border);
+  border-radius: 4px;
 }

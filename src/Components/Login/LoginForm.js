@@ -23,10 +23,13 @@ const LoginForm = () => {
     }
   }
 
+  const errorMessage =
+    error && (error.includes('Error') ? 'Usuário ou senha incorretos.' : error);
+
   return (
     <section className="animeLeft">
       <Head title="Login" />
-      <h1 className="title">Login</h1>
+      <h1 className="title title--auth">Entrar no PetGram</h1>
       <form className={styles.form} onSubmit={handleSubmit}>
         <Input label="Usuário" type="text" name="username" {...username} />
         <Input label="Senha" type="password" name="password" {...password} />
@@ -35,16 +38,16 @@ const LoginForm = () => {
         ) : (
           <Button>Entrar</Button>
         )}
-        <Error error={error && 'Dados incorretos.'} />
+        <Error error={errorMessage} />
       </form>
       <Link className={styles.perdeu} to="/login/perdeu">
-        Perdeu a Senha?
+        Perdeu a senha?
       </Link>
       <div className={styles.cadastro}>
         <h2 className={styles.subtitle}>Cadastre-se</h2>
-        <p>Ainda não possui conta? Cadastre-se no site.</p>
+        <p>Compartilhe fotos do seu pet.</p>
         <Link className={stylesBtn.button} to="/login/criar">
-          Cadastro
+          Criar conta
         </Link>
       </div>
     </section>

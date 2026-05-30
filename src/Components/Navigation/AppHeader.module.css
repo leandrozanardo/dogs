@@ -1,0 +1,69 @@
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 90;
+  background: var(--pg-surface);
+  border-bottom: 1px solid var(--pg-border);
+}
+
+.inner {
+  max-width: var(--pg-layout-max);
+  margin: 0 auto;
+  padding: 0 1rem;
+  height: var(--pg-header-height);
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.logo {
+  font-size: 1.35rem;
+  font-weight: 600;
+  letter-spacing: -0.03em;
+  flex-shrink: 0;
+}
+
+.searchWrap {
+  flex: 1;
+  display: none;
+}
+
+.search {
+  width: 100%;
+  max-width: 268px;
+  margin: 0 auto;
+  display: block;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 8px;
+  background: var(--pg-bg);
+  font-size: 14px;
+  text-align: center;
+}
+
+.actions {
+  margin-left: auto;
+  display: flex;
+  gap: 0.5rem;
+}
+
+.iconBtn {
+  background: none;
+  border: none;
+  padding: 0.5rem;
+  cursor: pointer;
+  display: flex;
+  color: var(--pg-text);
+}
+
+@media (min-width: 768px) {
+  .searchWrap {
+    display: block;
+  }
+}
+
+@media (min-width: 1264px) {
+  .header {
+    display: none;
+  }
+}

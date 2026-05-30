@@ -1,14 +1,25 @@
-.comments {
-  overflow-y: auto;
+.list {
+  padding: 0 1rem 0.75rem;
+}
+
+.item {
+  margin-bottom: 0.65rem;
+  font-size: 14px;
+  line-height: 1.35;
   word-break: break-word;
-  padding: 0 2rem;
 }
 
-.single.comments {
-  padding: 0px;
+.item strong {
+  font-weight: 600;
+  margin-right: 0.35rem;
 }
 
-.comments li {
-  margin-bottom: 0.5rem;
-  line-height: 1.2;
+.item a {
+  color: inherit;
+}
+
+.empty {
+  color: var(--pg-text-secondary);
+  font-size: 14px;
+  padding: 0.25rem 0 0.75rem;
 }

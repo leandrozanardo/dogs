@@ -18,14 +18,15 @@ const Photo = () => {
 
   if (error) return <Error error={error} />;
   if (loading) return <Loading />;
-  if (data)
+  if (data) {
     return (
       <section className="container mainContainer">
         <Head title={data.photo.title} />
-        <PhotoContent single={true} data={data} />
+        <PhotoContent data={data} variant="page" />
       </section>
     );
-  else return null;
+  }
+  return null;
 };
 
 export default Photo;

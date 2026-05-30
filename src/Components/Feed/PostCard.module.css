@@ -1,0 +1,168 @@
+.card {
+  background: var(--pg-surface);
+  border: 1px solid var(--pg-border);
+  border-radius: 0;
+  margin-bottom: 0.75rem;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.65rem 0.9rem;
+}
+
+.user {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  min-width: 0;
+}
+
+.avatarRing {
+  padding: 2px;
+  border-radius: 50%;
+  background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+  flex-shrink: 0;
+}
+
+.avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: #efefef;
+  color: var(--pg-text);
+  font-size: 11px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid var(--pg-surface);
+}
+
+.username {
+  font-size: 14px;
+  font-weight: 600;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.more {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  display: flex;
+  color: var(--pg-text);
+}
+
+.media {
+  width: 100%;
+  padding: 0;
+  border: none;
+  background: #000;
+  cursor: pointer;
+  display: block;
+  position: relative;
+}
+
+.media img {
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+}
+
+.heartBurst {
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  width: fit-content;
+  height: fit-content;
+  font-size: 5rem;
+  color: #fff;
+  filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.35));
+  animation: burst 0.8s ease forwards;
+  pointer-events: none;
+}
+
+@keyframes burst {
+  0% {
+    opacity: 0;
+    transform: scale(0.4);
+  }
+  15% {
+    opacity: 1;
+    transform: scale(1.1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1);
+  }
+}
+
+.footer {
+  padding: 0.35rem 0.9rem 0.85rem;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.25rem 0 0.5rem;
+}
+
+.actions button {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  display: flex;
+  color: var(--pg-text);
+  line-height: 0;
+}
+
+.liked {
+  color: var(--pg-like);
+}
+
+.save {
+  margin-left: auto;
+}
+
+.likes {
+  font-size: 14px;
+  margin-bottom: 0.35rem;
+}
+
+.likes strong {
+  font-weight: 600;
+}
+
+.caption {
+  font-size: 14px;
+  line-height: 1.35;
+  margin-bottom: 0.35rem;
+}
+
+.caption strong {
+  font-weight: 600;
+  margin-right: 0.35rem;
+}
+
+.viewComments {
+  background: none;
+  border: none;
+  padding: 0;
+  color: var(--pg-text-secondary);
+  font-size: 14px;
+  cursor: pointer;
+  margin-bottom: 0.35rem;
+}
+
+.time {
+  font-size: 10px;
+  color: var(--pg-text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}

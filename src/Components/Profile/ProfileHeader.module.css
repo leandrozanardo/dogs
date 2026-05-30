@@ -1,0 +1,111 @@
+.header {
+  padding: 1.5rem 1rem 1.25rem;
+  background: var(--pg-surface);
+  border: 1px solid var(--pg-border);
+  border-bottom: none;
+}
+
+@media (min-width: 768px) {
+  .header {
+    border-radius: 4px 4px 0 0;
+  }
+}
+
+.top {
+  display: flex;
+  align-items: center;
+  gap: 1.75rem;
+  margin-bottom: 1.25rem;
+}
+
+.avatar {
+  width: 5.5rem;
+  height: 5.5rem;
+  border-radius: 50%;
+  background: linear-gradient(45deg, #f09433, #e6683c, #dc2743);
+  color: #fff;
+  font-size: 1.35rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.stats {
+  display: flex;
+  flex: 1;
+  justify-content: space-around;
+  text-align: center;
+}
+
+.stats strong {
+  display: block;
+  font-size: 1.1rem;
+}
+
+.stats span {
+  font-size: 14px;
+  color: var(--pg-text);
+}
+
+.username {
+  font-size: 1.25rem;
+  font-weight: 300;
+  line-height: 1.2;
+  margin-bottom: 0.35rem;
+}
+
+.bio {
+  font-weight: 600;
+  font-size: 14px;
+  margin-bottom: 0.25rem;
+}
+
+.meta {
+  font-size: 14px;
+  color: var(--pg-text-secondary);
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.85rem;
+}
+
+.btnFollow,
+.btnFollowing,
+.btnSecondary {
+  flex: 1;
+  min-width: 0;
+  text-align: center;
+  padding: 0.45rem 1rem;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 14px;
+  border: none;
+  cursor: pointer;
+}
+
+.btnFollow {
+  background: var(--pg-accent);
+  color: #fff;
+}
+
+.btnFollow:hover {
+  background: var(--pg-accent-hover);
+}
+
+.btnFollowing {
+  background: var(--pg-surface);
+  border: 1px solid var(--pg-border);
+  color: var(--pg-text);
+}
+
+.btnSecondary {
+  background: var(--pg-surface);
+  border: 1px solid var(--pg-border);
+  color: var(--pg-text);
+  display: inline-block;
+}
